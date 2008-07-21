@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE data SYSTEM "http://www.woltlab.com/DTDs/bbcodes.dtd">
+<!-- SVN-ID: $Id$ -->
+<data>
+	<import>
+		<bbcode name="spoiler">
+			<classname>SpoilerBBCode</classname>
+			<allowedchildren>none^align,b,font,i,s,size,sub,sup,u</allowedchildren>
+			<wysiwygicon>insertSpoilerM.png</wysiwygicon>
+			<attributes>
+				<attribute name="0" />
+			</attributes>
+		</bbcode>
+	</import>
+</data>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE package SYSTEM "http://www.woltlab.com/DTDs/package.dtd">
+<!-- SVN-ID: $Id$ -->
+<package name="com.woltlab.community.roul.bbcode.spoiler">
+	<packageInformation>
+		<packageName>BBCode: Spoiler</packageName>
+		<packageDescription>This Plugin adds the Spoiler-BBCode</packageDescription>
+		<isUnique>1</isUnique>
+		<version>1.0.0</version>
+		<date>2008-07-20</date>
+		<plugin>com.woltlab.wcf.data.message.bbcode</plugin>
+	</packageInformation>
+
+	<authorInformation>
+		<author>RouL</author>
+		<authorURL>http://community.woltlab.com/db/index.php?page=User&amp;userID=18184</authorURL>
+	</authorInformation>
+
+	<requiredPackages>
+		<requiredPackage minversion="1.0.8">com.woltlab.wcf</requiredPackage>
+		<requiredPackage minversion="1.0.5">com.woltlab.wcf.data.message.bbcode</requiredPackage>
+	</requiredPackages>
+
+	<instructions type="install">
+		<files>files.tar</files>
+		<templates>templates.tar</templates>
+		<languages languagecode="de">de.xml</languages>
+		<languages languagecode="de-informal">de-informal.xml</languages>
+		<languages languagecode="en">en.xml</languages>
+		<bbcodes>bbcodes.xml</bbcodes>
+	</instructions>
+</package>
