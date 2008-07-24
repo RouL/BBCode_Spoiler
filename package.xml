@@ -4,7 +4,9 @@
 <package name="com.woltlab.community.roul.bbcode.spoiler">
 	<packageInformation>
 		<packageName>BBCode: Spoiler</packageName>
+		<packageName language="fr">BBCode: Spoiler</packageName>
 		<packageDescription>This Plugin adds the Spoiler-BBCode</packageDescription>
+		<packageDescription language="fr">Ce plugin ajoute le BBCode « Spoiler »</packageDescription>
 		<isUnique>1</isUnique>
 		<version>1.0.0</version>
 		<date>2008-07-20</date>
@@ -27,6 +29,7 @@
 		<languages languagecode="de">de.xml</languages>
 		<languages languagecode="de-informal">de-informal.xml</languages>
 		<languages languagecode="en">en.xml</languages>
+		<languages languagecode="fr">fr.xml</languages>
 		<bbcodes>bbcodes.xml</bbcodes>
 	</instructions>
 </package>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "http://www.woltlab.com/DTDs/language.dtd">
+<!-- SVN-ID: $Id: en.xml 96 2008-07-21 10:33:37Z RouL $ -->
+<language languagecode="fr">
+	<category name="wcf.bbcode">
+		<item name="wcf.bbcode.spoiler.title"><![CDATA[Spoiler]]></item>
+		<item name="wcf.bbcode.spoiler.noScript"><![CDATA[Sélectionnez le contenu de la zone ci-dessous pour afficher le texte.]]></item>
+		<item name="wcf.bbcode.spoiler.warning"><![CDATA[Spoiler]]></item>
+	</category>
+</language>
