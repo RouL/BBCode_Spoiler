@@ -1,9 +1,9 @@
 /**
  * @author		Markus Bartz
- * @copyright	2008 Blackstorm
+ * @copyright	2011 Markus Bartz
  * @package		com.woltlab.community.roul.bbcode.spoiler
  * @license		GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
- * SVN-ID:		$Id$
+ * @version		$Id$
  */
 function Spoiler() {
 	this.spoilers = Array();

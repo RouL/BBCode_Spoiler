@@ -1,27 +1,26 @@
-<?xml version="1.0"?>
-<!DOCTYPE package SYSTEM "http://www.woltlab.com/DTDs/package.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- SVN-ID: $Id$ -->
-<package name="com.woltlab.community.roul.bbcode.spoiler">
-	<packageInformation>
-		<packageName>BBCode: Spoiler</packageName>
-		<packageName language="fr">BBCode : Spoiler</packageName>
-		<packageDescription>This Plugin adds the Spoiler-BBCode</packageDescription>
-		<packageDescription language="fr">Ce plugin ajoute le BBCode « Spoiler »</packageDescription>
-		<isUnique>1</isUnique>
-		<version>1.0.0</version>
-		<date>2008-07-20</date>
+<package name="com.woltlab.community.roul.bbcode.spoiler" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/package.xsd">
+	<packageinformation>
+		<packagename>BBCode: Spoiler</packagename>
+		<packagedescription>This Plugin adds the Spoiler-BBCode</packagedescription>
+		<packagedescription language="fr">Ce plugin ajoute le BBCode « Spoiler »</packagedescription>
+		<packagedescription language="it">Questo plugin aggiunge lo Spoiler-BBCode</packagedescription>
+		<isunique>1</isunique>
+		<version>1.0.1</version>
+		<date>2011-03-30</date>
 		<plugin>com.woltlab.wcf.data.message.bbcode</plugin>
-	</packageInformation>
+	</packageinformation>
 
-	<authorInformation>
-		<author>RouL</author>
-		<authorURL>http://community.woltlab.com/db/index.php?page=User&amp;userID=18184</authorURL>
-	</authorInformation>
+	<authorinformation>
+		<author>Markus Bartz</author>
+		<authorurl>http://codingcorner.info/</authorurl>
+	</authorinformation>
 
-	<requiredPackages>
-		<requiredPackage minversion="1.0.8">com.woltlab.wcf</requiredPackage>
-		<requiredPackage minversion="1.0.5">com.woltlab.wcf.data.message.bbcode</requiredPackage>
-	</requiredPackages>
+	<requiredpackages>
+		<requiredpackage minversion="1.0.8">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="1.0.5">com.woltlab.wcf.data.message.bbcode</requiredpackage>
+	</requiredpackages>
 
 	<instructions type="install">
 		<files>files.tar</files>
@@ -30,6 +29,11 @@
 		<languages languagecode="de-informal">de-informal.xml</languages>
 		<languages languagecode="en">en.xml</languages>
 		<languages languagecode="fr">fr.xml</languages>
+		<languages languagecode="it">it.xml</languages>
 		<bbcodes>bbcodes.xml</bbcodes>
+	</instructions>
+
+	<instructions type="update" fromversion="1.0.0">
+		<languages languagecode="it">it.xml</languages>
 	</instructions>
 </package>

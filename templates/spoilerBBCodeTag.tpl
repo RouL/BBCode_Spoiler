@@ -15,11 +15,11 @@
 	</div>
 	<div class="quoteBody">
 		<div style="display: none;">
-        		{@$content}
+			{@$content}
 		</div>
 		<noscript>
 			<div class="spoilerNoscript" style="background-color: {@$this->style->getVariable('messages.boxes.background.color')}; color: {@$this->style->getVariable('messages.boxes.background.color')}; border: {@$this->style->getVariable('container.border.outer.width')} {@$this->style->getVariable('container.border.outer.style')} {@$this->style->getVariable('container.border.outer.color')};">
-        			{@$content}
+				{@$content}
 			</div>
 			<div class="formFieldDesc spoilerNoscriptDesc">
 				<p>{lang}wcf.bbcode.spoiler.noScript{/lang}</p>
