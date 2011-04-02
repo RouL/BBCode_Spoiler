@@ -17,7 +17,7 @@ class SpoilerTemplateListener implements EventListener {
 	 * @see EventListener::execute()
 	 */
 	public function execute($eventObj, $className, $eventName) {
-		WCF::getTPL()->append('specialStyles', '<script type="text/javascript" src="wcf/js/Spoiler.class.js"></script>');
+		WCF::getTPL()->append('specialStyles', '<script type="text/javascript" src="'.RELATIVE_WCF_DIR.'js/Spoiler.class.js"></script>');
 	}
 }
 ?>
