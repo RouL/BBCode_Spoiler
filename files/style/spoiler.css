@@ -1,0 +1,15 @@
+.spoiler h3 {
+	cursor: pointer;
+}
+
+.cssSpoiler h3 {
+	cursor: default;
+}
+
+.cssSpoiler .quoteBody {
+	display: none;
+}
+
+.cssSpoiler:hover > .quoteBody {
+	display: block;
+}

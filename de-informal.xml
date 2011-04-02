@@ -3,7 +3,6 @@
 <language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/language.xsd" languagecode="de-informal">
 	<category name="wcf.bbcode">
 		<item name="wcf.bbcode.spoiler.title"><![CDATA[Spoiler einfügen]]></item>
-		<item name="wcf.bbcode.spoiler.noScript"><![CDATA[Markiere den Inhalt der Box um ihn zu lesen.]]></item>
 		<item name="wcf.bbcode.spoiler.warning"><![CDATA[Spoiler]]></item>
 	</category>
 </language>

@@ -4,7 +4,7 @@
 	<import>
 		<bbcode name="spoiler">
 			<classname>SpoilerBBCode</classname>
-			<allowedchildren>none^align,b,font,i,s,size,sub,sup,u</allowedchildren>
+			<allowedchildren>all</allowedchildren>
 			<wysiwygicon>insertSpoilerM.png</wysiwygicon>
 			<attributes>
 				<attribute name="0" />
