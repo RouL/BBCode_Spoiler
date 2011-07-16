@@ -1,4 +1,3 @@
-{* SVN-ID: $Id$ *}
 <div class="quoteBox spoiler cssSpoiler">
 	<div class="quoteHeader container-4">
 		<h3>

@@ -9,7 +9,6 @@ require_once(WCF_DIR.'lib/data/message/bbcode/BBCode.class.php');
  * @copyright	2011 Markus Bartz
  * @package		com.woltlab.community.roul.bbcode.spoiler
  * @license		GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
- * @version		$Id$
  */
 class SpoilerBBCode implements BBCode {
 	/**

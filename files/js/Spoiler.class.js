@@ -3,7 +3,6 @@
  * @copyright	2011 Markus Bartz
  * @package		com.woltlab.community.roul.bbcode.spoiler
  * @license		GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
- * @version		$Id$
  */
 var Spoiler = Class.create({
 	initialize: function() {
