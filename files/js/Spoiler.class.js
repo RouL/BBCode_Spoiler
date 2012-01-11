@@ -48,7 +48,7 @@ $.widget( "ui.wcfSpoiler", {
 	},
 });
 
-document.ready(function() {
+$.ready(function() {
 	$('.spoiler').wcfSpoiler();
 });
 }( jQuery ) );
