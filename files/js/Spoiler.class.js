@@ -4,35 +4,51 @@
  * @package		com.woltlab.community.roul.bbcode.spoiler
  * @license		GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
  */
-//var Spoiler = Class.create({
-//	initialize: function() {
-//		// nothing to do here.
-//	},
-//	
-//	register: function(spoilerElement) {
-//		spoilerElement.down('.quoteBody').setStyle({
-//			display: 'none'
-//		});
-//		spoilerElement.className = 'quoteBox spoiler jsSpoiler';
-//		spoilerElement.down('h3').observe('click', this.toggle);
-//	},
-//	
-//	toggle: function(event) {
-//		spoilerElement = Event.element(event).up('.spoiler');
-//		contentElement = spoilerElement.down('.quoteBody');
-//		if (contentElement.visible()) {
-//			Effect.BlindUp(contentElement, { duration: 0.5 });
-//		}
-//		else {
-//			Effect.BlindDown(contentElement, { duration: 0.5 });
-//		}
-//	}
-//});
-//
-//var spoiler = new Spoiler();
-//
-//document.observe("dom:loaded", function() {
-//	$$('.spoiler').each(function(spoilerElement) {
-//		spoiler.register(spoilerElement);
-//	});
-//});
+(function( $, undefined ) {
+
+$.widget( "ui.wcfSpoiler", {
+	options: {},
+	
+	/**
+	 * @see	jQuery.ui.Widget._create()
+	 */
+	_create: function() {
+		// hide spoiler content
+		this.element.find('.quoteBody').css('display', 'none');
+		
+		// switch css class to jsSpoiler 
+		this.element
+			.removeClass('cssSpoiler')
+			.addCLass('jsSpoiler');
+		
+		// add click event
+		this.element.find('h3').click(this.toggle);
+	},
+	
+	/**
+	 * @see	jQuery.ui.Widget.destroy()
+	 */
+	destroy: function() {
+		$.Widget.prototype.destroy.apply(this, arguments);
+		
+		// remove click event
+		this.element.find('h3').unbind('click', this.toggle);
+		
+		// switch css class to cssSpoiler 
+		this.element
+			.removeClass('jsSpoiler')
+			.addCLass('cssSpoiler');
+
+		// hide spoiler content
+		this.element.find('.quoteBody').css('display', 'block');
+	},
+	
+	toggle: function() {
+		this.element.toggle('blind', null, 'slow');
+	},
+});
+
+document.ready(function() {
+	$('.spoiler').wcfSpoiler();
+});
+}( jQuery ) );
