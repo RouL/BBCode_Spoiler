@@ -22,7 +22,10 @@ $.widget( "ui.wcfSpoiler", {
 			.addClass('jsSpoiler');
 		
 		// add click event
-		this.element.find('h3').click(this.toggle);
+		var $self = this;
+		this.element.find('h3').click(function() {
+			$self._toggle();
+		});
 	},
 	
 	/**
@@ -32,7 +35,7 @@ $.widget( "ui.wcfSpoiler", {
 		$.Widget.prototype.destroy.apply(this, arguments);
 		
 		// remove click event
-		this.element.find('h3').unbind('click', this.toggle);
+		this.element.find('h3').unbind('click');
 		
 		// switch css class to cssSpoiler 
 		this.element
@@ -46,8 +49,6 @@ $.widget( "ui.wcfSpoiler", {
 	_toggle: function() {
 		this.element.toggle('blind', null, 'slow');
 	},
-	
-	toggle: $.proxy(this._toggle, this),
 });
 
 $(document).ready(function() {
