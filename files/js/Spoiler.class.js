@@ -19,7 +19,7 @@ $.widget( "ui.wcfSpoiler", {
 		// switch css class to jsSpoiler 
 		this.element
 			.removeClass('cssSpoiler')
-			.addCLass('jsSpoiler');
+			.addClass('jsSpoiler');
 		
 		// add click event
 		this.element.find('h3').click(this.toggle);
@@ -37,7 +37,7 @@ $.widget( "ui.wcfSpoiler", {
 		// switch css class to cssSpoiler 
 		this.element
 			.removeClass('jsSpoiler')
-			.addCLass('cssSpoiler');
+			.addClass('cssSpoiler');
 
 		// hide spoiler content
 		this.element.find('.quoteBody').css('display', 'block');
