@@ -43,12 +43,14 @@ $.widget( "ui.wcfSpoiler", {
 		this.element.find('.quoteBody').css('display', 'block');
 	},
 	
-	toggle: function() {
+	_toggle: function() {
 		this.element.toggle('blind', null, 'slow');
 	},
+	
+	toggle: $.proxy(this._toggle, this),
 });
 
-$.ready(function() {
+$(document).ready(function() {
 	$('.spoiler').wcfSpoiler();
 });
 }( jQuery ) );
