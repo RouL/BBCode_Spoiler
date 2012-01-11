@@ -47,7 +47,7 @@ $.widget( "ui.wcfSpoiler", {
 	},
 	
 	_toggle: function() {
-		this.element.toggle('blind', null, 'slow');
+		this.element.find('.quoteBody').toggle('blind', null, 'slow');
 	},
 });
 
