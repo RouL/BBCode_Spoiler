@@ -23,7 +23,7 @@ $.widget( "ui.wcfSpoiler", {
 		
 		// add click event
 		var $self = this;
-		this.element.children('.quoteHeader h3').click(function() {
+		this.element.children('.quoteHeader').children('h3').click(function() {
 			$self._toggle();
 		});
 	},
@@ -35,7 +35,7 @@ $.widget( "ui.wcfSpoiler", {
 		$.Widget.prototype.destroy.apply(this, arguments);
 		
 		// remove click event
-		this.element.children('.quoteHeader h3').unbind('click');
+		this.element.children('.quoteHeader').children('h3').unbind('click');
 		
 		// switch css class to cssSpoiler 
 		this.element
