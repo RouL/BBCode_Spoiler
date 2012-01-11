@@ -22,10 +22,8 @@ $.widget( "ui.wcfSpoiler", {
 			.addClass('jsSpoiler');
 		
 		// add click event
-		var $self = this;
-		this.element.children('.quoteHeader').children('h3').click(function() {
-			$self._toggle();
-		});
+		this._toggle = $.proxy(this._toggleInternal, this);
+		this.element.children('.quoteHeader').children('h3').click(this._toggle);
 	},
 	
 	/**
@@ -35,7 +33,7 @@ $.widget( "ui.wcfSpoiler", {
 		$.Widget.prototype.destroy.apply(this, arguments);
 		
 		// remove click event
-		this.element.children('.quoteHeader').children('h3').unbind('click');
+		this.element.children('.quoteHeader').children('h3').unbind('click', this._toggle);
 		
 		// switch css class to cssSpoiler 
 		this.element
@@ -46,8 +44,8 @@ $.widget( "ui.wcfSpoiler", {
 		this.element.children('.quoteBody').css('display', 'block');
 	},
 	
-	_toggle: function() {
-		this.element.children('.quoteBody').toggle('blind', null, 'fast');
+	_toggleInternal: function() {
+		this.element.children('.quoteBody').toggle('blind', null, 500);
 	},
 });
 
