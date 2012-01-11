@@ -3,37 +3,53 @@
  * @copyright	2011 Markus Bartz
  * @package		com.woltlab.community.roul.bbcode.spoiler
  * @license		GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
- * @version		$Id$
  */
-var Spoiler = Class.create({
-	initialize: function() {
-		// nothing to do here.
+(function( $, undefined ) {
+
+$.widget( "ui.wcfSpoiler", {
+	options: {},
+	
+	/**
+	 * @see	jQuery.ui.Widget._create()
+	 */
+	_create: function() {
+		// hide spoiler content
+		this.element.children('.quoteBody').css('display', 'none');
+		
+		// switch css class to jsSpoiler 
+		this.element
+			.removeClass('cssSpoiler')
+			.addClass('jsSpoiler');
+		
+		// add click event
+		this._toggle = $.proxy(this._toggleInternal, this);
+		this.element.children('.quoteHeader').children('h3').click(this._toggle);
 	},
 	
-	register: function(spoilerElement) {
-		spoilerElement.down('.quoteBody').setStyle({
-			display: 'none'
-		});
-		spoilerElement.className = 'quoteBox spoiler jsSpoiler';
-		spoilerElement.down('h3').observe('click', this.toggle);
+	/**
+	 * @see	jQuery.ui.Widget.destroy()
+	 */
+	destroy: function() {
+		$.Widget.prototype.destroy.apply(this, arguments);
+		
+		// remove click event
+		this.element.children('.quoteHeader').children('h3').unbind('click', this._toggle);
+		
+		// switch css class to cssSpoiler 
+		this.element
+			.removeClass('jsSpoiler')
+			.addClass('cssSpoiler');
+
+		// hide spoiler content
+		this.element.children('.quoteBody').css('display', 'block');
 	},
 	
-	toggle: function(event) {
-		spoilerElement = Event.element(event).up('.spoiler');
-		contentElement = spoilerElement.down('.quoteBody');
-		if (contentElement.visible()) {
-			Effect.BlindUp(contentElement, { duration: 0.5 });
-		}
-		else {
-			Effect.BlindDown(contentElement, { duration: 0.5 });
-		}
-	}
+	_toggleInternal: function() {
+		this.element.children('.quoteBody').toggle('blind', null, 500);
+	},
 });
 
-var spoiler = new Spoiler();
-
-document.observe("dom:loaded", function() {
-	$$('.spoiler').each(function(spoilerElement) {
-		spoiler.register(spoilerElement);
-	});
+$(document).ready(function() {
+	$('.spoiler').wcfSpoiler();
 });
+}( jQuery ) );
