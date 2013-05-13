@@ -1,6 +1,8 @@
 BBCode: Spoiler
 ===============
 
+    Obsolete with WCF 2.0
+
 This Plugin adds the Spoiler-BBCode to the WoltLab community Framework
 
 Usage
